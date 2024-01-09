@@ -1,11 +1,12 @@
 // пошук по назві фільма та відображення інфо про фільм
 import { useLocation, useSearchParams } from 'react-router-dom';
-import { useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import css from './movies.module.css';
 
 const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [value, setValue] = useState(searchParams.get('query') || '');
+  // const [value, setValue] = useState(searchParams.get('query') || '');
   const [files, setFiles] = useState([]);
   const query = searchParams.get('query') ?? '';
   const apiKey = '3af213f4135af108020907fe62a17696';
@@ -36,15 +37,16 @@ const Movies = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    if (value === '') {
+    if (query === '') {
       alert('Please, enter something to search');
       return;
     }
   };
   return (
-    <div>
+    <div className={css.searchContainer}>
       <form onSubmit={handleSubmit}>
         <input
+          className={css.searchInput}
           type="text"
           value={query}
           onChange={handleChange}
@@ -53,15 +55,20 @@ const Movies = () => {
         />
         {/* <button type="submit">Search</button> */}
       </form>
-      <div>
-        <ul>
+      <div className={css.listContainer}>
+        <ul className={css.searchList}>
           {''}
           {files.map(file => (
             <li key={file.id}>
-              <Link to={`/movies/${file.id}`} state={{ from: location }}>
+              <Link
+                className={css.searchLink}
+                to={`/movies/${file.id}`}
+                state={{ from: location }}
+              >
                 {file.poster_path && (
                   <div>
                     <img
+                      className={css.img}
                       src={`https://image.tmdb.org/t/p/w200${file.poster_path}`}
                       alt={file.title}
                     />

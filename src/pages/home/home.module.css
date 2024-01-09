@@ -1,0 +1,22 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeList {
+  list-style: none;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.8;
+}
+.homeLink {
+  text-decoration: none;
+  color: black;
+}
+.homeLink:hover {
+  color: rgb(157, 69, 28);
+  text-shadow: 3px 2px 8px rgb(217, 131, 26);
+  text-decoration: underline;
+}

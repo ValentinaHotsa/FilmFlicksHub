@@ -2,6 +2,7 @@ import { useLocation, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
+import css from './movieDetails.module.css';
 
 const MovieDetails = () => {
   const location = useLocation();
@@ -35,9 +36,9 @@ const MovieDetails = () => {
     : '';
 
   return (
-    <div>
+    <div className={css.infoContainer}>
       <Link to={backLinkHref}>
-        <button>Back</button>
+        <button className={css.button}>Back</button>
       </Link>
 
       <h2>
@@ -46,6 +47,7 @@ const MovieDetails = () => {
       <p>User Score: {vote}</p>
       {movieDetails.poster_path && (
         <img
+          className={css.img}
           src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
           alt={movieDetails.title}
         />
@@ -53,7 +55,7 @@ const MovieDetails = () => {
 
       <div>
         <p>Genres: </p>
-        <ul>
+        <ul className={css.list}>
           {movieDetails.genres &&
             movieDetails.genres.map(genre => (
               <li key={genre.id}>{genre.name}</li>
@@ -61,12 +63,16 @@ const MovieDetails = () => {
         </ul>
       </div>
       <p>{movieDetails.overview}</p>
-      <ul>
+      <ul className={css.list}>
         <li>
-          <Link to="cast">Cast</Link>
+          <Link to="cast" className={css.linkInfo}>
+            Cast
+          </Link>
         </li>
         <li>
-          <Link to="reviews">Reviews</Link>
+          <Link to="reviews" className={css.linkInfo}>
+            Reviews
+          </Link>
         </li>
       </ul>
       <Outlet />

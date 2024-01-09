@@ -1,17 +1,18 @@
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 // import Home from '../pages/Home';
+import css from './sharedLayout/sharedLayout.module.css';
 
-const Home = lazy(() => import('../pages/Home'));
-const Movies = lazy(() => import('../pages/Movies'));
+const Home = lazy(() => import('../pages/home/Home'));
+const Movies = lazy(() => import('../pages/moviesList/Movies'));
 const Cast = lazy(() => import('./Cast'));
 const Reviews = lazy(() => import('./Reviews'));
-const MovieDetails = lazy(() => import('../pages/MovieDetails'));
-const SharedLayout = lazy(() => import('./SharedLayout'));
+const MovieDetails = lazy(() => import('../pages/movieDetails/MovieDetails'));
+const SharedLayout = lazy(() => import('./sharedLayout/SharedLayout'));
 
 export const App = () => {
   return (
-    <>
+    <div className={css.mainContainer}>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
@@ -23,6 +24,6 @@ export const App = () => {
           <Route path="*" element={<h1>Error</h1>} />
         </Route>
       </Routes>
-    </>
+    </div>
   );
 };

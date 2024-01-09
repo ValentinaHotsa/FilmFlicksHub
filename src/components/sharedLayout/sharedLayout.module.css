@@ -1,0 +1,25 @@
+.nav {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  background-color: rgb(31, 32, 4);
+  border-bottom: solid 2px rgb(185, 93, 93);
+  height: 100px;
+  align-items: center;
+}
+.navLink {
+  font-size: 30px;
+  text-decoration: none;
+  color: wheat;
+}
+.navLink:hover {
+  color: gold;
+  text-shadow: 3px 2px 8px rgb(217, 131, 26);
+}
+.mainContainer {
+  margin: 0 auto;
+}
+body {
+  background-color: rgb(248, 182, 157);
+  width: 100%;
+}

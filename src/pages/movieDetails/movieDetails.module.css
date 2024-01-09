@@ -1,0 +1,36 @@
+.button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border: 2px inset #373f12;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(222, 159, 64);
+}
+.button:hover,
+.button:focus {
+  background-color: #e3bdb6;
+  border-color: #50544f;
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 300px;
+}
+.img {
+  border-radius: 10px;
+  border: 2px inset #373f12;
+}
+.linkInfo {
+  color: rgb(29, 23, 15);
+}
+.linkInfo:hover {
+  color: rgb(255, 111, 0);
+  text-shadow: 3px 2px 8px rgb(217, 131, 26);
+}
+
+.list {
+  list-style: none;
+}
