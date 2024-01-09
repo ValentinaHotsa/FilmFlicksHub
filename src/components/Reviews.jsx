@@ -4,6 +4,7 @@ const Reviews = () => {
   const { movieId } = useParams();
   const [reviews, setReviews] = useState([]);
   const apiKey = '3af213f4135af108020907fe62a17696';
+
   useEffect(() => {
     const url = `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${apiKey}`;
 
@@ -12,7 +13,7 @@ const Reviews = () => {
       .then(data => setReviews(data.results))
       .catch(err => console.error('error:', err));
   }, [movieId, apiKey]);
-  console.log(reviews);
+
   return (
     <div>
       {reviews.length > 0 ? (

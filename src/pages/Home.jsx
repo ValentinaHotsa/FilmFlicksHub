@@ -30,7 +30,7 @@ const Home = () => {
     <main>
       <h1>Trending today</h1>
       <ul>
-        {' '}
+        {''}
         {movies.map(movie => (
           <li key={movie.id}>
             <Link to={`movies/${movie.id}`}>{movie.title}</Link>

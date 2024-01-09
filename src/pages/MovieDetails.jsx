@@ -1,8 +1,11 @@
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
+  const location = useLocation();
+  const backLinkHref = location.state?.from ?? '/';
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState({});
   useEffect(() => {
@@ -23,7 +26,7 @@ export const MovieDetails = () => {
       .then(data => setMovieDetails(data))
       .catch(err => console.error('error:' + err));
   }, [movieId]);
-  // console.log(movieDetails);
+
   const releaseYear = movieDetails.release_date
     ? movieDetails.release_date.substring(0, 4)
     : '';
@@ -33,6 +36,10 @@ export const MovieDetails = () => {
 
   return (
     <div>
+      <Link to={backLinkHref}>
+        <button>Back</button>
+      </Link>
+
       <h2>
         {movieDetails.title} ({releaseYear})
       </h2>
@@ -62,6 +69,8 @@ export const MovieDetails = () => {
           <Link to="reviews">Reviews</Link>
         </li>
       </ul>
+      <Outlet />
     </div>
   );
 };
+export default MovieDetails;

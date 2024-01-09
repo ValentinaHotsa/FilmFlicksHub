@@ -22,7 +22,7 @@ const Cast = () => {
       .then(data => setMovieCast(data.cast))
       .catch(err => console.error('error:' + err));
   }, [movieId]);
-  console.log(movieCast);
+  
   return (
     <div>
       <ul>
