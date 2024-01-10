@@ -1,10 +1,13 @@
 // сьогоднішні тренди
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import css from './home.module.css';
 
 const Home = () => {
+  const location = useLocation();
+
   const [movies, setMovies] = useState([]);
+
   useEffect(() => {
     // const API_KEY = '3af213f4135af108020907fe62a17696';
 
@@ -34,7 +37,11 @@ const Home = () => {
         {''}
         {movies.map(movie => (
           <li key={movie.id}>
-            <Link to={`movies/${movie.id}`} className={css.homeLink}>
+            <Link
+              to={`movies/${movie.id}`}
+              state={{ from: location }}
+              className={css.homeLink}
+            >
               {movie.title}
             </Link>
           </li>

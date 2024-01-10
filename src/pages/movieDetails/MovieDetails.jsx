@@ -65,12 +65,20 @@ const MovieDetails = () => {
       <p>{movieDetails.overview}</p>
       <ul className={css.list}>
         <li>
-          <Link to="cast" className={css.linkInfo}>
+          <Link
+            to="cast"
+            state={{ from: backLinkHref }}
+            className={css.linkInfo}
+          >
             Cast
           </Link>
         </li>
         <li>
-          <Link to="reviews" className={css.linkInfo}>
+          <Link
+            to="reviews"
+            state={{ from: backLinkHref }}
+            className={css.linkInfo}
+          >
             Reviews
           </Link>
         </li>
