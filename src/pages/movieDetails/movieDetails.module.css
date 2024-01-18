@@ -99,8 +99,8 @@
   display: flex;
   justify-content: space-between;
 }
-.itemMore {
-}
+/* .itemMore {
+} */
 .linkInfo {
   font-family: 'Gilroy Bold';
   color: #ffffff;
@@ -130,8 +130,8 @@
   right: 0;
   left: 0;
 }
-.infoContainer {
-}
+/* .infoContainer {
+} */
 
 .linkInfo:after {
   content: '';
@@ -190,8 +190,8 @@
 }
 
 /* ============================CAST================================= */
-.containerCast {
-}
+/* .containerCast {
+} */
 .listCast {
   list-style: none;
   display: flex;
