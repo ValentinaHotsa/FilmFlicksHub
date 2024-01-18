@@ -1,19 +1,30 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import css from './sharedLayout.module.css';
 
 const SharedLayout = () => {
   return (
     <div className={css.mainContainer}>
+      {/* <div className={css.containerSpot1}>
+        <svg className={css.spot1} width="100" height="100" fill="white">
+          <use href="../../vectors/Vector1.svg"></use>
+        </svg>
+      </div> */}
       <header className={css.header}>
         <nav className={css.nav}>
-          <Link to="/" className={css.navLink}>
+          <img
+            src="../../images/logo.png"
+            alt="logo"
+            width="100"
+            height="100"
+          />
+          <NavLink to="/" className={css.navLink}>
             Home
-          </Link>
-          <Link to="/movies" className={css.navLink}>
+          </NavLink>
+          <NavLink to="/movies" className={css.navLink}>
             Movies
-          </Link>
+          </NavLink>
         </nav>
       </header>
       <Suspense fallback={<div>Loading...</div>}>

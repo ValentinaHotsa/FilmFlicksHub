@@ -1,6 +1,6 @@
 import { useLocation, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
 import css from './movieDetails.module.css';
 
@@ -36,55 +36,65 @@ const MovieDetails = () => {
     : '';
 
   return (
-    <div className={css.infoContainer}>
-      <Link to={backLinkHref}>
+    <section className={css.infoContainer}>
+      <NavLink to={backLinkHref}>
         <button className={css.button}>Back</button>
-      </Link>
+      </NavLink>
+      <div className={css.containerMovieDetails}>
+        <h2 className={css.titleMovie}>
+          {movieDetails.title} ({releaseYear})
+        </h2>
+        <p>User Score: {vote}</p>
+        <div className={css.containerImgInfo}>
+          {movieDetails.poster_path && (
+            <img
+              className={css.img}
+              src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
+              alt={movieDetails.title}
+            />
+          )}
 
-      <h2>
-        {movieDetails.title} ({releaseYear})
-      </h2>
-      <p>User Score: {vote}</p>
-      {movieDetails.poster_path && (
-        <img
-          className={css.img}
-          src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
-          alt={movieDetails.title}
-        />
-      )}
+          <div className={css.containerInfo}>
+            <b className={css.genresTitle}>
+              Genres:
+              <div className={css.qwer}>
+                {movieDetails.genres &&
+                  movieDetails.genres.map(genre => (
+                    <b key={genre.id} className={css.genresItem}>
+                      {genre.name}
+                    </b>
+                  ))}
+              </div>{' '}
+            </b>
+            <p className={css.overview}>{movieDetails.overview}</p>
+            <div className={css.containerListMore}>
+              <ul className={css.listMore}>
+                <li className={css.itemMore}>
+                  <NavLink
+                    to="cast"
+                    state={{ from: backLinkHref }}
+                    className={css.linkInfo}
+                  >
+                    Cast
+                  </NavLink>
+                </li>
+                <li className={css.itemMore}>
+                  <Link
+                    to="reviews"
+                    state={{ from: backLinkHref }}
+                    className={css.linkInfo}
+                  >
+                    Reviews
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-      <div>
-        <p>Genres: </p>
-        <ul className={css.list}>
-          {movieDetails.genres &&
-            movieDetails.genres.map(genre => (
-              <li key={genre.id}>{genre.name}</li>
-            ))}
-        </ul>
+        <Outlet />
       </div>
-      <p>{movieDetails.overview}</p>
-      <ul className={css.list}>
-        <li>
-          <Link
-            to="cast"
-            state={{ from: backLinkHref }}
-            className={css.linkInfo}
-          >
-            Cast
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="reviews"
-            state={{ from: backLinkHref }}
-            className={css.linkInfo}
-          >
-            Reviews
-          </Link>
-        </li>
-      </ul>
-      <Outlet />
-    </div>
+    </section>
   );
 };
 export default MovieDetails;

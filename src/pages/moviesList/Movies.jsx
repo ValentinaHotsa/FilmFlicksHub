@@ -68,7 +68,7 @@ const Movies = () => {
                 {file.poster_path && (
                   <div>
                     <img
-                      className={css.img}
+                      className={css.searchImg}
                       src={`https://image.tmdb.org/t/p/w200${file.poster_path}`}
                       alt={file.title}
                     />

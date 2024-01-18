@@ -32,21 +32,43 @@ const Home = () => {
 
   return (
     <main className={css.mainContainer}>
-      <h1>Trending today</h1>
-      <ul className={css.homeList}>
-        {''}
-        {movies.map(movie => (
-          <li key={movie.id}>
-            <Link
-              to={`movies/${movie.id}`}
-              state={{ from: location }}
-              className={css.homeLink}
-            >
-              {movie.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <section className={css.hero}>
+        <div>
+          <img src="../../vectors/Vector11.png" alt="" />
+        </div>
+        <h1 className={css.titlePage}>Films, series, cartoons in one place!</h1>
+        <p className={css.aboutPage}>
+          Have you always wanted to know about the latest news in the world of
+          cinema? Want to learn about trends? Find out more about this or that
+          film? Then this site is for you.
+        </p>
+      </section>
+      <section className={css.mainSection}>
+        <h2 className={css.homeListTitle}>Trending today</h2>
+        <ul className={css.homeList}>
+          {''}
+          {movies.map(movie => (
+            <li key={movie.id} className={css.homeItem}>
+              <Link
+                to={`movies/${movie.id}`}
+                state={{ from: location }}
+                className={css.homeLink}
+              >
+                {movie.poster_path && (
+                  <div className={css.homeImgContainer}>
+                    <img
+                      className={css.homeImg}
+                      src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+                      alt={movie.title}
+                    />
+                    <p className={css.homeMovieTitle}>{movie.title}</p>
+                  </div>
+                )}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
     </main>
   );
 };

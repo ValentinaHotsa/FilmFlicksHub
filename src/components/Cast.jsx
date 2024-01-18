@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import css from '../pages/movieDetails/movieDetails.module.css';
 
 const Cast = () => {
   const { movieId } = useParams();
@@ -22,22 +23,25 @@ const Cast = () => {
       .then(data => setMovieCast(data.cast))
       .catch(err => console.error('error:' + err));
   }, [movieId]);
-  
+
   return (
-    <div>
-      <ul>
+    <div className={css.containerCast}>
+      <ul className={css.listCast}>
         {movieCast.map(actor => (
-          <li key={actor.cast_id}>
+          <li className={css.itemCast} key={actor.cast_id}>
             {actor.profile_path ? (
               <img
                 src={`https://image.tmdb.org/t/p/w200${actor.profile_path}`}
                 alt={actor.name}
+                className={css.imgCast}
               />
             ) : (
-              <p>No image</p>
+              <p className={css.notificationImg}>No image</p>
             )}
-            <h4>Actor: {actor.name}</h4>
-            <p>Character: {actor.character}</p>
+            <div className={css.containerName}>
+              <h4 className={css.nameCast}>Actor: {actor.name}</h4>
+              <p className={css.characterCast}>Character: {actor.character}</p>
+            </div>
           </li>
         ))}
       </ul>

@@ -2,7 +2,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  margin-top: 60px;
+  margin-bottom: 51px;
+  margin-left: 120px;
 }
 
 .homeList {
@@ -10,13 +13,100 @@
   text-align: center;
   font-size: 20px;
   line-height: 1.8;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 40px;
 }
 .homeLink {
   text-decoration: none;
-  color: black;
 }
-.homeLink:hover {
-  color: rgb(157, 69, 28);
-  text-shadow: 3px 2px 8px rgb(217, 131, 26);
-  text-decoration: underline;
+.homeMovieTitle {
+  background-image: linear-gradient(to right, #686de0, #54b3d6 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.homeMovieTitle:before {
+  content: '';
+  background: #686de0;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.homeItem:hover .homeMovieTitle {
+  background-position: 0;
+}
+
+.homeItem:hover .homeMovieTitle::before {
+  width: 100%;
+}
+
+.aboutPage {
+  font-family: Gilroy Medium;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32.5px;
+  width: 658px;
+}
+.titlePage {
+  font-family: Gilroy Bold;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 800px;
+  height: 194px;
+}
+.hero {
+}
+.homeImg {
+  width: 349.496px;
+  height: 495px;
+  border-radius: 30px;
+  padding-top: 30px;
+}
+.homeImgContainer {
+  width: 420px;
+  height: 655px;
+  border-radius: 20px;
+  background: #2c2c54;
+  box-shadow: 0px 0px 30px 0px rgba(146, 146, 146, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.homeListMovie {
+}
+.homeMovieTitle {
+  font-family: Gilroy Bold;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-top: 20px;
+}
+.mainSection {
+}
+.homeListTitle {
+  font-family: 'Gilroy Bold';
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 210px;
+  margin-bottom: 46px;
 }
