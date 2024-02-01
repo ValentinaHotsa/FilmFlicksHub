@@ -13,12 +13,6 @@ const SharedLayout = () => {
       </div> */}
       <header className={css.header}>
         <nav className={css.nav}>
-          <img
-            src="../../images/logo.png"
-            alt="logo"
-            width="100"
-            height="100"
-          />
           <NavLink to="/" className={css.navLink}>
             Home
           </NavLink>

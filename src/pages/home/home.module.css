@@ -7,7 +7,12 @@
   margin-bottom: 51px;
   margin-left: 120px;
 }
-
+main {
+  background-image: url(/src/vectors/Vector11.png),
+    url(/src/vectors/Vector2.png);
+  background-repeat: no-repeat;
+  background-position: 100% 0%, 0% 60%;
+}
 .homeList {
   list-style: none;
   text-align: center;

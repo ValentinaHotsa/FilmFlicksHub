@@ -17,6 +17,10 @@ body {
     'Gilroy Bold', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: #2c2c54;
+  width: 100%;
+  color: white;
 }
 
 code {

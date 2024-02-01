@@ -9,8 +9,6 @@ const Home = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    // const API_KEY = '3af213f4135af108020907fe62a17696';
-
     const fetch = require('node-fetch');
 
     const url =
@@ -33,9 +31,6 @@ const Home = () => {
   return (
     <main className={css.mainContainer}>
       <section className={css.hero}>
-        <div>
-          <img src="../../vectors/Vector11.png" alt="" />
-        </div>
         <h1 className={css.titlePage}>Films, series, cartoons in one place!</h1>
         <p className={css.aboutPage}>
           Have you always wanted to know about the latest news in the world of
