@@ -12,7 +12,7 @@ const SharedLayout = lazy(() => import('./sharedLayout/SharedLayout'));
 
 export const App = () => {
   return (
-    <div className={css.mainContainer}>
+    <>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
@@ -24,6 +24,6 @@ export const App = () => {
           <Route path="*" element={<h1>Error</h1>} />
         </Route>
       </Routes>
-    </div>
+    </>
   );
 };

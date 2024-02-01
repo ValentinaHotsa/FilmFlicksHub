@@ -22,7 +22,9 @@ body {
   width: 100%;
   color: white;
 }
-
+img {
+  display: block;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

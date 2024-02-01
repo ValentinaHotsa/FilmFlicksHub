@@ -5,7 +5,7 @@ import css from './sharedLayout.module.css';
 
 const SharedLayout = () => {
   return (
-    <div className={css.mainContainer}>
+    <>
       {/* <div className={css.containerSpot1}>
         <svg className={css.spot1} width="100" height="100" fill="white">
           <use href="../../vectors/Vector1.svg"></use>
@@ -24,7 +24,7 @@ const SharedLayout = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>
-    </div>
+    </>
   );
 };
 
