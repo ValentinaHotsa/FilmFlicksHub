@@ -1,37 +1,152 @@
+/* -------------------------------PHONE----------------------------------------------- */
 .searchContainer {
+  font-family: Gilroy Medium;
+  font-style: normal;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 .searchList {
   list-style: none;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.8;
   display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
+  flex-direction: column;
+  row-gap: 40px;
+  padding-left: 0;
 }
 .searchLink {
   text-decoration: none;
   color: white;
 }
+.searchMovieTitle {
+  font-family: Gilroy Bold;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-top: 50px;
+  background-image: linear-gradient(to right, #686de0, #54b3d6 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.searchMovieTitle:before {
+  content: '';
+  background: #686de0;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.searchItem:hover .searchMovieTitle {
+  background-position: 0;
+}
 
-.img {
-  border-radius: 10px;
+.searchItem:hover .searchMovieTitle::before {
+  width: 100%;
 }
-.searchLink:hover {
-  color: rgb(157, 69, 28);
-  text-shadow: 3px 2px 8px rgb(217, 131, 26);
-  text-decoration: underline;
-}
+
 .searchInput {
+  font-family: Gilroy Medium;
   height: 30px;
-  width: 300px;
-  margin-top: 50px;
+  width: 245px;
+  /* margin-top: 50px; */
   padding: 10px 20px;
-  font-size: 15px;
+  font-size: 24px;
   border: 2px inset #373f12;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   outline: none;
+  margin-bottom: 40px;
+}
+.searchImgContainer {
+  height: 450px;
+  width: 288px;
+  border-radius: 20px;
+  background: #2c2c54;
+  box-shadow: 0px 0px 30px 0px rgba(146, 146, 146, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.searchImg {
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+/* -------------------------------TABLET----------------------------------------------- */
+@media screen and (min-width: 768px) {
+  .searchContainer {
+    max-width: 768px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .searchInput {
+    font-size: 28px;
+    width: 300px;
+  }
+  .searchList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 40px;
+    justify-content: center;
+  }
+  .searchImg {
+    width: 280px;
+    height: 425px;
+    margin-bottom: 30px;
+  }
+  .searchImgContainer {
+    width: 350px;
+    height: 585px;
+  }
+  .searchMovieTitle {
+    font-size: 35px;
+  }
+}
+
+/* -------------------------------DESCTOP----------------------------------------------- */
+@media screen and (min-width: 1158px) {
+  .searchContainer {
+    max-width: 1158px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* .searchList {
+    display: flex;
+    flex-wrap: wrap;
+  } */
+
+  .searchInput {
+    font-size: 25px;
+    margin-bottom: 80px;
+    width: 350px;
+  }
+  .searchMovieTitle {
+    font-size: 35px;
+  }
 }

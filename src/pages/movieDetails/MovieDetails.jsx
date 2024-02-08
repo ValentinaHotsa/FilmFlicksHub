@@ -48,7 +48,7 @@ const MovieDetails = () => {
         <div className={css.containerImgInfo}>
           {movieDetails.poster_path && (
             <img
-              className={css.img}
+              className={css.movieImg}
               src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
               alt={movieDetails.title}
             />
@@ -57,7 +57,7 @@ const MovieDetails = () => {
           <div className={css.containerInfo}>
             <b className={css.genresTitle}>
               Genres:
-              <div className={css.qwer}>
+              <div className={css.genre}>
                 {movieDetails.genres &&
                   movieDetails.genres.map(genre => (
                     <b key={genre.id} className={css.genresItem}>

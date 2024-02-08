@@ -59,22 +59,22 @@ const Movies = () => {
         <ul className={css.searchList}>
           {''}
           {files.map(file => (
-            <li key={file.id}>
+            <li className={css.searchItem} key={file.id}>
               <Link
                 className={css.searchLink}
                 to={`/movies/${file.id}`}
                 state={{ from: location }}
               >
                 {file.poster_path && (
-                  <div>
+                  <div className={css.searchImgContainer}>
                     <img
                       className={css.searchImg}
                       src={`https://image.tmdb.org/t/p/w200${file.poster_path}`}
                       alt={file.title}
                     />
+                    <p className={css.searchMovieTitle}>{file.title}</p>
                   </div>
                 )}
-                {file.title}
               </Link>
             </li>
           ))}

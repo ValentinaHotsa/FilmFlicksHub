@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   /* align-items: center; */
   /* margin-top: 60px;
   margin-bottom: 51px;
@@ -49,15 +50,6 @@
   padding-left: 0;
 }
 
-.homeMovieTitle {
-  font-family: Gilroy Bold;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  padding-top: 50px;
-  /* width: 320px; */
-}
 .homeImg {
   border-radius: 20px;
   margin-top: 30px;
@@ -83,7 +75,51 @@
   margin-bottom: 46px;
 }
 
-/* TABLET */
+.homeLink {
+  text-decoration: none;
+}
+.homeMovieTitle {
+  font-family: Gilroy Bold;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-top: 50px;
+  /* width: 320px; */
+  background-image: linear-gradient(to right, #686de0, #54b3d6 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.homeMovieTitle:before {
+  content: '';
+  background: #686de0;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.homeItem:hover .homeMovieTitle {
+  background-position: 0;
+}
+
+.homeItem:hover .homeMovieTitle::before {
+  width: 100%;
+}
+
+/* -------------------------------------TABLET------------------------------------ */
+
 @media screen and (min-width: 768px) {
   .mainContainer {
     max-width: 768px;
@@ -112,6 +148,7 @@
     flex-wrap: wrap;
     column-gap: 20px;
     row-gap: 40px;
+    justify-content: center;
   }
   .homeImg {
     width: 280px;
@@ -149,9 +186,6 @@
     height: 194px;
   }
   .homeList {
-    list-style: none;
-    text-align: center;
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -159,56 +193,20 @@
     row-gap: 40px;
   }
   .homeMovieTitle {
-    font-size: 50px;
+    font-size: 25px;
   }
   .homeImg {
-    width: 349.496px;
-    height: 495px;
+    width: 290px;
+    height: 435px;
   }
   .homeImgContainer {
-    width: 420px;
-    height: 655px;
+    width: 360px;
+    height: 595px;
   }
   .homeListTitle {
     margin-top: 210px;
     margin-bottom: 46px;
   }
-}
-
-.homeLink {
-  text-decoration: none;
-}
-.homeMovieTitle {
-  background-image: linear-gradient(to right, #686de0, #54b3d6 50%, #fff 50%);
-  background-size: 200% 100%;
-  background-position: -100%;
-  display: inline-block;
-  padding: 5px 0;
-  position: relative;
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease-in-out;
-}
-
-.homeMovieTitle:before {
-  content: '';
-  background: #686de0;
-  display: block;
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 3px;
-  transition: all 0.3s ease-in-out;
-}
-
-.homeItem:hover .homeMovieTitle {
-  background-position: 0;
-}
-
-.homeItem:hover .homeMovieTitle::before {
-  width: 100%;
 }
 
 /* .hero {
