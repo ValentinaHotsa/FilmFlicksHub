@@ -123,6 +123,7 @@
 @media screen and (min-width: 768px) {
   .mainContainer {
     max-width: 768px;
+    align-items: start;
   }
   .hero {
     margin-left: 35px;
@@ -207,6 +208,9 @@
     margin-top: 210px;
     margin-bottom: 46px;
   }
+  /* .hero {
+    margin-left: 0;
+  } */
 }
 
 /* .hero {
