@@ -166,6 +166,10 @@
   .genresItem {
     font-size: 16px;
   }
+  .containerMovieDetails {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 /* ---------------------------------------DESCTOP------------------------------------------ */
 @media screen and (min-width: 1158px) {
@@ -174,8 +178,7 @@
     flex-direction: column;
     justify-content: center;
     font-family: 'Gilroy Bold';
-    padding-left: 122px;
-    padding-right: 122px;
+    padding-left: 80px;
   }
   .linkInfo {
     width: 160px;
@@ -191,6 +194,8 @@
     background: #686de0;
     padding: 40px;
     border-radius: 20px;
+    width: auto;
+    /* padding-right: 122px; */
   }
   .titleMovie {
     font-size: 35px;
@@ -199,6 +204,7 @@
   .containerMovieDetails {
     margin-top: 45px;
     align-items: start;
+    padding-right: 80px;
   }
   .genresTitle {
     font-size: 25px;
@@ -258,16 +264,18 @@
   font-weight: 700;
   line-height: 32.5px;
   padding-bottom: 25px;
-  padding-left: 25px;
+  /* padding-left: 25px; */
 }
 .itemReviews {
-  margin: 25px;
+  /* margin: 25px; */
   background-color: #686ce077;
   border-radius: 20px;
   padding: 35px;
+  margin-bottom: 35px;
 }
 .listReviews {
   list-style: none;
+  padding-left: 0px;
 }
 .contentReviews {
   font-family: 'Gilroy Medium';
