@@ -30,3 +30,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#root {
+  background-image: url(/src/vectors/Vector11.png),
+    url(/src/vectors/Vector2.png);
+  background-repeat: no-repeat;
+  background-position: 100% 0%, 0% 60%;
+}
