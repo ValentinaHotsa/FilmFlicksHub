@@ -4,15 +4,15 @@ Welcome to FilmFlicksHub, your ultimate destination for all things related to mo
 
 ## Routes
 
-- Home (/): The Home component serves as the landing page, featuring a curated list of popular movies.
+- `/` - The Home component serves as the landing page, featuring a curated list of popular movies.
 
-- Movies (/movies): The Movies component allows users to search for movies using keywords. It provides a search functionality to explore a wide range of movies based on user preferences.
+- `/movies` - The Movies component allows users to search for movies using keywords. It provides a search functionality to explore a wide range of movies based on user preferences.
 
-- Movie Details (/movies/:movieId): The MovieDetails component displays detailed information about a specific movie identified by :movieId. Users can view essential details such as synopsis, ratings, release date, and more.
+- `/movies/:movieId` - The MovieDetails component displays detailed information about a specific movie identified by :movieId. Users can view essential details such as synopsis, ratings, release date, and more.
 
-- Cast (/movies/:movieId/cast): The Cast component provides information about the cast of a particular movie. It is rendered on the MovieDetails page, allowing users to explore the talented individuals behind the film.
+- `/movies/:movieId/cast` - The Cast component provides information about the cast of a particular movie. It is rendered on the MovieDetails page, allowing users to explore the talented individuals behind the film.
 
-- Reviews (/movies/:movieId/reviews): The Reviews component offers insights into user reviews and ratings for a specific movie. Like the Cast component, it is rendered on the MovieDetails page, enhancing the user's understanding of the movie's reception.
+- `/movies/:movieId/reviews` - The Reviews component offers insights into user reviews and ratings for a specific movie. Like the Cast component, it is rendered on the MovieDetails page, enhancing the user's understanding of the movie's reception.
 
 ## Backend Integration
 
