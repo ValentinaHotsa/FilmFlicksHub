@@ -67,7 +67,7 @@
   font-family: Gilroy Medium;
   height: 30px;
   width: 245px;
-  /* margin-top: 50px; */
+
   padding: 10px 20px;
   font-size: 24px;
   border: 2px inset #373f12;
@@ -136,10 +136,6 @@
     justify-content: center;
     align-items: center;
   }
-  /* .searchList {
-    display: flex;
-    flex-wrap: wrap;
-  } */
 
   .searchInput {
     font-size: 25px;

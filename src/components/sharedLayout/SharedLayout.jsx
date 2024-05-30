@@ -1,17 +1,16 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import Loader from 'components/loader/Loader';
 import css from './sharedLayout.module.css';
+import img from '../../assets/filmflickshub-high-resolution-logo-transparent.png';
 
 const SharedLayout = () => {
   return (
     <>
-      {/* <div className={css.containerSpot1}>
-        <svg className={css.spot1} width="100" height="100" fill="white">
-          <use href="../../vectors/Vector1.svg"></use>
-        </svg>
-      </div> */}
       <header className={css.header}>
+        <img className={css.logo} src={img} alt="logo"></img>
+
         <nav className={css.nav}>
           <NavLink to="/" className={css.navLink}>
             Home
@@ -21,7 +20,7 @@ const SharedLayout = () => {
           </NavLink>
         </nav>
       </header>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
     </>

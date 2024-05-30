@@ -31,8 +31,27 @@ code {
     monospace;
 }
 #root {
-  background-image: url(/src/vectors/Vector11.png),
-    url(/src/vectors/Vector2.png);
+  min-height: 100vh;
+}
+
+.home-bg {
+  background-image: url(/src/assets/vectors/Vector11.png),
+    url(/src/assets/vectors/Vector2.png);
   background-repeat: no-repeat;
-  background-position: 100% 0%, 0% 60%;
+  background-position: -30% 0%, 0% 60%;
+}
+
+.second-page-bg {
+  background-image: url(/src/assets/vectors/Vector11.png);
+  background-repeat: no-repeat;
+  background-position: -30% 0%;
+}
+
+@media screen and (min-width: 550px) {
+  .home-bg {
+    background-position: 100% 0%, 0% 30%;
+  }
+  .second-page-bg {
+    background-position: 100% 0%;
+  }
 }

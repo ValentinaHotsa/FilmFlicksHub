@@ -1,4 +1,3 @@
-// пошук по назві фільма та відображення інфо про фільм
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -6,18 +5,10 @@ import css from './movies.module.css';
 
 const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  // const [value, setValue] = useState(searchParams.get('query') || '');
   const [files, setFiles] = useState([]);
   const query = searchParams.get('query') ?? '';
   const apiKey = '3af213f4135af108020907fe62a17696';
   const location = useLocation();
-  // const handleSearch = () => {
-  //   setSearchParams({ query: value });
-  //   if (!value) {
-  //     setFiles([]);
-  //     return;
-  //   }
-  // };
 
   const handleChange = e => {
     if (e.target.value === '') {
@@ -53,11 +44,9 @@ const Movies = () => {
           placeholder="Search movies"
           autoFocus
         />
-        {/* <button type="submit">Search</button> */}
       </form>
       <div className={css.listContainer}>
         <ul className={css.searchList}>
-          {''}
           {files.map(file => (
             <li className={css.searchItem} key={file.id}>
               <Link

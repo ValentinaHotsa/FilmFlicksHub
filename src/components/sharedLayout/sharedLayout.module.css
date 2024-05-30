@@ -1,14 +1,13 @@
 .nav {
   display: flex;
-  gap: 50px;
+  gap: 20px;
   justify-content: center;
-  height: 100px;
-  align-items: center;
+  flex-grow: 1;
 }
 .navLink {
-  font-size: 30px;
+  font-size: 16px;
   text-decoration: none;
-  /* color: white; */
+
   background-image: linear-gradient(to right, #686de0, #54b3d6 50%, #fff 50%);
   background-size: 200% 100%;
   background-position: -100%;
@@ -39,10 +38,43 @@
   width: 100%;
 }
 
-/* .active {
-  color: #686de0;
-} */
+.logo {
+  flex-shrink: 0;
+  height: 20px;
+  width: 150px;
+}
 
-/* .mainContainer {
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
-} */
+  width: 100%;
+  padding: 10px;
+  max-width: 1158px;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    max-width: 768px;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  .logo {
+    height: 40px;
+    width: 270px;
+  }
+  .navLink {
+    font-size: 30px;
+  }
+  .nav {
+    gap: 50px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .header {
+    max-width: 1158px;
+  }
+}

@@ -5,19 +5,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* align-items: center; */
-  /* margin-top: 60px;
-  margin-bottom: 51px;
-  margin-left: 120px; */
-  /* min-width: 288px;
-  max-width: 396px; */
+
   margin-left: auto;
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
 }
 .hero {
-  /* margin: 0 auto; */
   width: 288px;
 }
 .aboutPage {
@@ -32,11 +26,8 @@
   font-style: 40px;
 
   margin-bottom: 25px;
-  /* height: 194px; */
 }
-.mainSection {
-  /* margin: 0 auto; */
-}
+
 .homeList {
   list-style: none;
   text-align: center;
@@ -44,8 +35,6 @@
   line-height: 1.8;
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
-  /* column-gap: 20px; */
   row-gap: 40px;
   padding-left: 0;
 }
@@ -85,7 +74,6 @@
   font-weight: 700;
   line-height: normal;
   padding-top: 50px;
-  /* width: 320px; */
   background-image: linear-gradient(to right, #686de0, #54b3d6 50%, #fff 50%);
   background-size: 200% 100%;
   background-position: -100%;
@@ -139,7 +127,6 @@
     font-size: 80px;
     font-weight: 700;
     margin-bottom: 35px;
-    /* width: 800px; */
   }
   .homeListTitle {
     font-size: 50px;
@@ -169,17 +156,7 @@
 @media screen and (min-width: 1158px) {
   .mainContainer {
     max-width: 1158px;
-    /* background-image: url(/src/vectors/Vector11.png),
-      url(/src/vectors/Vector2.png);
-    background-repeat: no-repeat;
-    background-position: 100% 0%, 0% 60%; */
   }
-  /* .aboutPage {
-    font-size: 25px;
-    font-weight: 500;
-    line-height: 32.5px;
-    width: 658px;
-  } */
   .titlePage {
     font-size: 80px;
     font-weight: 700;
@@ -208,16 +185,4 @@
     margin-top: 210px;
     margin-bottom: 46px;
   }
-  /* .hero {
-    margin-left: 0;
-  } */
 }
-
-/* .hero {
-} */
-
-/* .homeListMovie {
-} */
-
-/* .mainSection {
-} */

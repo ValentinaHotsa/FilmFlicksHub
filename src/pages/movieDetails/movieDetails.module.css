@@ -15,7 +15,6 @@
   background-color: #686de0;
   text-decoration: none;
   display: inline-block;
-  /* margin: 10px 20px; */
   padding: 6px 14px;
   position: relative;
   border: 2px solid #ffffff;
@@ -48,13 +47,10 @@
   height: calc(100% + 10px);
 }
 .containerImgInfo {
-  /* gap: 50px; */
   font-family: Gilroy Medium;
-  /* margin-top: 40px; */
-
   padding-top: 15px;
   border-radius: 20px;
-  /* width: 288px; */
+  
   width: 100%;
 }
 .movieImg {
@@ -121,7 +117,6 @@
   font-style: normal;
   font-weight: 500;
   line-height: 22.5px;
-  /* width: 581.124px; */
   padding-top: 15px;
 }
 .containerInfo {
@@ -191,7 +186,7 @@
     gap: 50px;
     font-family: Gilroy Medium;
     margin-top: 40px;
-    background: #686de0;
+    background: #686ce05a;
     padding: 40px;
     border-radius: 20px;
     width: auto;
@@ -227,7 +222,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 32.5px;
-    /* width: 581.124px; */
+
     padding-top: 35px;
   }
 
@@ -263,10 +258,9 @@
   font-weight: 700;
   line-height: 32.5px;
   padding-bottom: 25px;
-  /* padding-left: 25px; */
 }
 .itemReviews {
-  /* margin: 25px; */
+ 
   background-color: #686ce077;
   border-radius: 20px;
   padding: 35px;
@@ -285,16 +279,13 @@
 }
 
 /* ============================CAST================================= */
-/* .containerCast {
-  width: 288px;
-} */
+
 .listCast {
   list-style: none;
   text-align: center;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  /* column-gap: 35px; */
   row-gap: 40px;
   padding: 0;
 }
@@ -303,20 +294,16 @@
   background: #2c2c54;
   box-shadow: 0px 0px 30px 0px rgba(146, 146, 146, 0.2);
   height: 450px;
-  /* padding-top: 35px; */
   text-align: center;
   width: 288px;
   font-family: 'Gilroy Medium';
-  /* position: relative; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
+ 
 }
 .imgCast {
   border-radius: 20px;
-  /* background: #2c2c54;
-  box-shadow: 0px 0px 30px 0px rgba(146, 146, 146, 0.2); */
   margin-bottom: 10px;
   margin-top: 30px;
 }
@@ -356,14 +343,4 @@
     width: 350px;
     height: 585px;
   }
-}
-@media screen and (min-width: 1158px) {
-}
-
-.containerName {
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, 220%); */
 }
